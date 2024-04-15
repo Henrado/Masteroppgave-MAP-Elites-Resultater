@@ -1,0 +1,6 @@
+Her er Z_T_B brukt
+Detter er for X reting
+genom = np.array([-1,0,-1,0,-1,0,
+                          -1,0,-1,0,-1,0,
+                          -1,0, 1,0, 1,0,
+                          -1,0,-1,0,-1,0])
