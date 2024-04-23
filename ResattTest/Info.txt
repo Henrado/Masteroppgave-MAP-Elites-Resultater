@@ -79,3 +79,10 @@ try:
 finally:
     env.close() # type: ignore
     pass
+
+
+
+
+Yoga-Win16-11_gang21 er kjørt med test = (16, 11) og directory = "result/Yoga-Win1" og timescale=100
+
+
