@@ -1,0 +1,57 @@
+ParallelismManager:
+  batch_mode: false
+  parallelismType: none
+Qutee:
+  CubeCount: 10000
+  CubeSize: 2.0
+  legAngularLimits:
+  - 45
+  - -60
+  - 60
+  - 0
+  - 100
+Unity:
+  controller: TanhControllerWOff
+  editor_mode: false
+  evaluation_steps: 1000
+  fitnessfunction: basicFitness
+  headless: true
+  individ: Individual_zeroLocked
+  time_scale: 1
+algorithms:
+  algoQD:
+    batch_size: 100
+    budget: 10000
+    type: RandomSearchMutPolyBounded
+  algoTotal:
+    algorithms:
+    - algoQD
+    tell_container_when_switching: only_best
+    type: Sq
+  container: cont0
+  dimension: 36
+  ind_domain:
+  - -1.0
+  - 1.0
+  optimisation_task: maximisation
+containers:
+  cont0:
+    features_domain:
+    - - -10.0
+      - 10.0
+    - - -10.0
+      - 10.0
+    fitness_domain:
+    - - 0.0
+      - 1.0
+    max_items_per_bin: 1
+    name: cont0
+    shape:
+    - 20
+    - 20
+    type: Grid
+log_base_path: seeded
+logger:
+  save_period: 20
+main_algorithm_name: algoTotal
+seed: 317215
